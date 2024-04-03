@@ -1,0 +1,112 @@
+@charset "UTF-8";
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.livro{
+    height: 140px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rebeccapurple;
+}
+.ocultar{
+    display: none;
+    background-color: rebeccapurple;
+
+}
+.forms>.fechar{
+    background-color: red;
+    width: 50px;
+    font-size: 2em;
+    font-weight: bolder;
+    color: white;
+    border-radius: 50%;
+    align-self: flex-end;
+}
+.formulario {
+    position: fixed;
+    top: 27vh;
+    left: 38vw;
+    background-color: rebeccapurple;
+
+    padding: 50px;
+}
+.forms {
+    display: flex;
+    flex-direction: column;
+    height: 19em;
+    width: 20em;
+    color:white;
+    
+}
+input{
+    border: none;
+    border-radius: 3px;
+    padding: 10px;
+    outline: none;  
+}
+.forms>button{
+    height: 50px;
+    width: 100px;
+    border-radius: 3px;
+    border: none;
+}
+img {
+    height: 100%;
+}
+.colecao {
+    height: 75vh;
+    width: 70vw;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    column-gap: 0.9%;
+    row-gap: 1%;
+    margin-top: 2%;
+    overflow: scroll;
+}
+.deletar {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50%;
+    align-content: center;
+    justify-items: center;
+
+    height: 230px;
+    border: 1px solid rebeccapurple;
+    border-radius: 10px;
+    text-align: center;
+    transition: 300ms;
+
+}
+.deletar:hover{
+    background-color: rebeccapurple;
+    color: white;
+}
+.deletar>button{
+    border: none;
+    border-radius: 5px;
+    background-color: rebeccapurple;
+    color: white;
+    padding: 10px;
+    outline: none;
+}
+.deletar>button:hover{
+    background-color: rgb(254, 252, 255);
+    transition: 500ms;
+    font-weight: bolder;
+    color: red;
+}
+.deletar>button:active{
+    background-color: rgb(81, 41, 121);
+}
+
+.checkbox {
+    height: 1em;
+    width: 1em;
+}
