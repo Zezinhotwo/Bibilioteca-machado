@@ -14,7 +14,14 @@ function DomRemove() {
 
 // REMOVE TO FORM
 const Domform = document.querySelector(".addBook");
-// Domform.appendChild(DomRemove());
+const removerLivro = document.createElement("button");
+removerLivro.innerHTML = "X";
+removerLivro.classList.add("removerLivro");
+removerLivro.addEventListener("click", () => {
+  Domform.classList.toggle("hide");
+});
+Domform.appendChild(removerLivro);
+
 // END REMOVE TO FORM
 const add = document.querySelector(".add");
 add.addEventListener("click", () => {
@@ -43,7 +50,7 @@ function DomAddBookToLibrary(nome, pag, descricao) {
   addBookToLibrary(nome, pag, descricao);
 
   // Adiciona detalhes do livro ao DOM
-  DomLivro.innerText = `${nome}, ${pag}, ${DomImg.value}`;
+  DomLivro.innerText = `${nome}. \nN° - ${pag}. ${DomImg.value}`;
   DomLivro.appendChild(DomImg);
   DomLivro.appendChild(DomRemove());
   DomLivro.appendChild(DomCheckbox);
