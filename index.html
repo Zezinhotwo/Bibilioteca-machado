@@ -1,33 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Bibilioteca</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biblioteca</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button class="add">Add Book</button>
+    <form action="" class="addBook hide">
+      <label for="nome"
+        >Nome
+        <input type="text" id="DomNome" placeholder="Autor" />
+      </label>
+      <label for="pagina"
+        >Paginas
+        <input
+          type="number"
+          name="Paginas"
+          id="paginas"
+          placeholder="Paginas"
+        />
+      </label>
 
-    <div class="formulario">
-        <form class="forms" action="#" method="post">
-            <button type="button" class="fechar">X</button>
-            <label for="title">Titutlo</label>
-            <input type="text" name="title" id="title">
-            <label for="autor">Autor</label>
-            <input type="text" name="autor" id="autor">
-            <label for="paginas">Paginas</label>
-            <input type="number" name="paginas" id="paginas">
-            <label for="livro">Imagem</label>
-            <input type="file" name="livro" id="livro">
-            <button type="button" class="publiLib">Enviar</button>
-        </form>
-    </div>
-    <div class="livro">
-        <button class="AddLib">Adicionar livro</button>
-    </div>
-    <div class="colecao">
-    </div>
-    <!-- <h1>colecao</h1> -->
-    <script src="script.js"></script>
-</body>
+      <label for="caminho"
+        >Image
+        <input
+          type="text"
+          name="caminho"
+          id="caminho"
+          placeholder="Link da imagem"
+        />
+      </label>
+
+      <button class="enviar">Enviar</button>
+    </form>
+    <section class="estante"></section>
+
+    <script type="module" src="index.js"></script>
+  </body>
 </html>

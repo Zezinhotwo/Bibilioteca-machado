@@ -1,0 +1,13 @@
+{
+  "name": "bibilioteca",
+  "version": "1.0.0",
+  "description": "acesse o site por AQUI: https://zezinhotwo.github.io/Bibilioteca-machado/",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

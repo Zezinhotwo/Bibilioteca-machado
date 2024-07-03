@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>input</title>
+  </head>
+  <body>
+    <label for="img">IMG</label>
+    <input type="image" src="" id="image" alt="" />
+    <input type="text" id="caminho" />
+    <button id="envia">Enviar</button>
+    <script>
+      const envia = document.getElementById("envia");
+      envia.addEventListener("click", () => {
+        const image = document.getElementById("image");
+        const caminho = document.getElementById("caminho");
+        console.log(caminho.value);
+        image.src = caminho.value;
+      });
+    </script>
+  </body>
+</html>
