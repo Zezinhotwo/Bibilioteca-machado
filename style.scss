@@ -26,9 +26,11 @@ body {
     font-size: 24px;
     font-family: "Courier New", Courier, monospace;
     font-weight: bolder;
+    z-index: 2;
+
 }
 .addBook {
-    z-index: 2;
+    z-index: 3;
     position: absolute;
     background-color: rgba(190, 190, 190, 0.747);
     height: 50%;
