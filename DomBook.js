@@ -17,7 +17,7 @@ const Domform = document.querySelector(".addBook");
 const removerLivro = document.createElement("button");
 removerLivro.innerHTML = "X";
 removerLivro.classList.add("removerLivro");
-removerLivro.addEventListener("click", () => {
+removerLivro.addEventListener("click", (event) => {
   event.preventDefault()
   Domform.classList.toggle("hide")
 });
@@ -48,7 +48,7 @@ function DomAddBookToLibrary(nome, pag, descricao) {
   DomCheckbox.type = "checkbox";
 
   // Adiciona o livro à biblioteca
-  // addBookToLibrary(nome, pag, descricao);
+  addBookToLibrary(nome, pag, descricao);
 
   // Adiciona detalhes do livro ao DOM
   DomLivro.innerText = `${nome}. \nN° - ${pag}. ${DomImg.value}`;
