@@ -1,6 +1,16 @@
 import addBookToLibrary from "./construtor.js";
 
 // REMOVER BOOK
+// class DomActions {
+//   constructor() {
+//     this.init();
+//   }
+//   init() {}
+//   criarElementos() {
+//     const deleteLivro = document.createElement("button");
+
+//   }
+// }
 function DomRemove() {
   const removerLivro = document.createElement("button");
   removerLivro.innerHTML = "X";
@@ -18,8 +28,8 @@ const removerLivro = document.createElement("button");
 removerLivro.innerHTML = "X";
 removerLivro.classList.add("removerLivro");
 removerLivro.addEventListener("click", (event) => {
-  event.preventDefault()
-  Domform.classList.toggle("hide")
+  event.preventDefault();
+  Domform.classList.toggle("hide");
 });
 Domform.appendChild(removerLivro);
 
@@ -30,6 +40,10 @@ add.addEventListener("click", () => {
 });
 // Add Dom Library
 function DomAddBookToLibrary(nome, pag, descricao) {
+  if (nome == false || pag == false || descricao == false) {
+    alert("Todos os campos precisam ser validos");
+    return;
+  }
   const estante = document.querySelector(".estante");
   //Image Book
   const DomImg = document.createElement("input");
@@ -90,24 +104,17 @@ export default function iniciar() {
   const enviar = document.querySelector(".enviar");
   enviar.addEventListener("click", (event) => {
     event.preventDefault();
-
     function DomForm() {
       let DomLivroForm = {
         name: "",
         link: "",
         pag: "",
       };
-
-      DomLivroForm.name = document.getElementById("DomNome").value;
-      DomLivroForm.link = document.getElementById("caminho").value;
-      DomLivroForm.pag = document.getElementById("paginas").value;
-      // DomLivroForm.pag = 230;
-      console.log("nome " + DomLivroForm.name); // Log para verificar os dados coletados
-      console.log("link " + DomLivroForm.link); // Log para verificar os dados coletados
+      
       DomAddBookToLibrary(
-        DomLivroForm.name,
-        DomLivroForm.pag,
-        DomLivroForm.link
+        (DomLivroForm.name = document.getElementById("DomNome").value),
+        (DomLivroForm.pag = document.getElementById("paginas").value),
+        (DomLivroForm.link = document.getElementById("caminho").value),
       );
     }
     DomForm();

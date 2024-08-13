@@ -8,10 +8,10 @@
   </head>
   <body>
     <button class="add">Add Book</button>
-    <form action="" class="addBook hide">
+    <form action="#" class="addBook hide">
       <label for="nome"
         >Nome
-        <input type="text" id="DomNome" placeholder="Autor" />
+        <input type="text" id="DomNome" placeholder="Autor" required />
       </label>
       <label for="pagina"
         >Paginas
@@ -20,19 +20,21 @@
           name="Paginas"
           id="paginas"
           placeholder="Paginas"
+          min="30"
+          required
         />
       </label>
 
       <label for="caminho"
-        >Image
+        >Image - Link
         <input
           type="text"
           name="caminho"
           id="caminho"
           placeholder="Link da imagem"
+          required
         />
       </label>
-
       <button class="enviar">Enviar</button>
     </form>
     <section class="estante"></section>
