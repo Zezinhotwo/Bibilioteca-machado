@@ -1,4 +1,4 @@
-import addBookToLibrary from "./construtor.js";
+import Book from "./Book.js";
 
 // REMOVER BOOK
 // class DomActions {
@@ -76,25 +76,25 @@ function DomAddBookToLibrary(nome, pag, descricao) {
 DomAddBookToLibrary(
   "Quarta Capa",
   "264",
-  "https://editoraflutuante.com.br/wp-content/uploads/2018/08/Quarta-Capa-Frente-1.jpg"
+  "https://editoraflutuante.com.br/wp-content/uploads/2018/08/Quarta-Capa-Frente-1.jpg",
 );
 // 2
 DomAddBookToLibrary(
   "A Névoa Da Floresta",
   "353",
-  "https://marketplace.canva.com/EAD0UPCkitY/1/0/1024w/canva-capa-de-livro-de-suspense-monocrom%C3%A1tica-com-foto-de-floresta-U1dpnJ3bwKw.jpg"
+  "https://marketplace.canva.com/EAD0UPCkitY/1/0/1024w/canva-capa-de-livro-de-suspense-monocrom%C3%A1tica-com-foto-de-floresta-U1dpnJ3bwKw.jpg",
 );
 //3
 DomAddBookToLibrary(
   "Antes Que Você Diga Adeus",
   "195",
-  "https://marketplace.canva.com/EAE6PMW8esk/1/0/1003w/canva-capa-de-livro-vermelho-e-preto-contorno-romance-chick-lit-5cdERsfaKTY.jpg"
+  "https://marketplace.canva.com/EAE6PMW8esk/1/0/1003w/canva-capa-de-livro-vermelho-e-preto-contorno-romance-chick-lit-5cdERsfaKTY.jpg",
 );
 //4
 DomAddBookToLibrary(
   "Mestre Do Tempo",
   "241",
-  "https://ocapista.com.br/imgs/capas/capa_livro_fantasia.jpg"
+  "https://ocapista.com.br/imgs/capas/capa_livro_fantasia.jpg",
 );
 
 // ********** END BOOKS TEST
@@ -110,7 +110,7 @@ export default function iniciar() {
         link: "",
         pag: "",
       };
-      
+
       DomAddBookToLibrary(
         (DomLivroForm.name = document.getElementById("DomNome").value),
         (DomLivroForm.pag = document.getElementById("paginas").value),

@@ -1,3 +1,3 @@
-import iniciar from "./DomBook.js";
+import iniciar from "./scripts/DomBook.js";
 
 iniciar()
