@@ -5,7 +5,7 @@ export default class Book {
   #autor = "";
   #pages = 0;
   #descricao = "";
-  
+   
 constructor(){}
   constructor(autor, pages, descricao) {
     this.#autor = autor;
