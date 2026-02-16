@@ -5,7 +5,7 @@ export default class Library {
     static addBook(book) {
         this.library.push(book);
     }
-    static listBoots() {
+    static listBooks() {
         return this.library
     }
     static updateBook(book) {

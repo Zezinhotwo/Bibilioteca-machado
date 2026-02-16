@@ -46,11 +46,11 @@ function DomAddBookToLibrary(nome, pag, descricao) {
   }
   const estante = document.querySelector(".estante");
   //Image Book
-  const DomImg = document.createElement("input");
-  DomImg.type = "image";
+  // const DomImg = document.createElement("input");
+  // DomImg.type = "image";
   //   DomImg.style.height = "15em";
-  DomImg.src = descricao;
-  DomImg.classList.add("imgBook");
+  // DomImg.src = descricao;
+  // DomImg.classList.add("imgBook");
 
   // Cria o div do Book
   const DomLivro = document.createElement("div");
@@ -66,7 +66,7 @@ function DomAddBookToLibrary(nome, pag, descricao) {
 
   // Adiciona detalhes do livro ao DOM
   DomLivro.innerText = `${nome}. \nN° - ${pag}. ${DomImg.value}`;
-  DomLivro.appendChild(DomImg);
+  // DomLivro.appendChild(DomImg);
   DomLivro.appendChild(DomRemove());
   DomLivro.appendChild(DomCheckbox);
   estante.appendChild(DomLivro);

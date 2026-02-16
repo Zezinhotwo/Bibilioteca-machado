@@ -1,3 +1,5 @@
-import iniciar from "./scripts/DomBook.js";
+import DomEventHandler from "./scripts/DomEventHandler.js"
 
-iniciar()
+document.addEventListener("DOMContentLoaded", () => {
+    new DomEventHandler();
+});

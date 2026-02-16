@@ -1,13 +1,13 @@
 
 
 export default class Book {
-  #id = crypto.randomUUID;
+  #id = 0;
   #autor = "";
   #pages = 0;
   #descricao = "";
-   
-constructor(){}
-  constructor(autor, pages, descricao) {
+
+  constructor(id, autor, pages, descricao) {
+    this.#id = id;
     this.#autor = autor;
     this.#pages = pages;
     this.#descricao = descricao;

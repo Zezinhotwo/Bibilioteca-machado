@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,38 +7,53 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- Um dialog simples contendo um form -->
+    <dialog open class="box">
+      <form class="addBook">
+        <section class="inputs">
+          <label for="nome"
+            >Nome
+            <input type="text" id="name" placeholder="Autor" required />
+          </label>
+          <label for="pagina">
+            <input
+              type="number"
+              name="Pages"
+              id="pages"
+              placeholder="Paginas"
+              min="30"
+              required
+            />
+          </label>
+          <label for="description">
+            <textarea
+              name="description"
+              id="description"
+              cols="29"
+              rows="3"
+              placeholder="Lorem Ipsum is simply dummy text of the printing."
+            ></textarea>
+          </label>
+          <!-- <label for="caminho">
+            <input
+              type="text"
+              name="caminho"
+              id="caminho"
+              placeholder="Link da imagem"
+              required
+            />
+          </label> -->
+        </section>
+        <menu class="menu">
+          <button type="reset">Cancel</button>
+          <button class="enviar">Enviar</button>
+        </menu>
+      </form>
+    </dialog>
+
     <button class="add">Add Book</button>
-    <form action="#" class="addBook hide">
-      <label for="nome"
-        >Nome
-        <input type="text" id="DomNome" placeholder="Autor" required />
-      </label>
-      <label for="pagina"
-        >Paginas
-        <input
-          type="number"
-          name="Paginas"
-          id="paginas"
-          placeholder="Paginas"
-          min="30"
-          required
-        />
-      </label>
 
-      <label for="caminho"
-        >Image - Link
-        <input
-          type="text"
-          name="caminho"
-          id="caminho"
-          placeholder="Link da imagem"
-          required
-        />
-      </label>
-      <button class="enviar">Enviar</button>
-    </form>
     <section class="estante"></section>
-
     <script type="module" src="index.js"></script>
   </body>
 </html>
