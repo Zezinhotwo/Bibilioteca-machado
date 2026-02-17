@@ -5,12 +5,14 @@ export default class Book {
   #autor = "";
   #pages = 0;
   #descricao = "";
+  #image = "";
 
-  constructor(id, autor, pages, descricao) {
+  constructor(id, autor, pages, descricao, image) {
     this.#id = id;
     this.#autor = autor;
     this.#pages = pages;
     this.#descricao = descricao;
+    this.#image = image;
   }
 
   getId() {
@@ -27,6 +29,14 @@ export default class Book {
 
   getDescription() {
     return this.#descricao;
+  }
+
+  getImage() {
+    return this.#image;
+  }
+
+  setImage(img) {
+    this.#image = img;
   }
 
   setAutor(name) {
